@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="6.1.0.7880" date="11/30/15 4:24 PM">
+  <dashboardconfig memento.version="6.1.0.7880" suppresssavewarning="false" created="2015-11-30T16:24:51-0700" sessiontype="live" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" modifiedbyname="dmabxw0" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" opendrilldowninnewdashboard="true" groupname="" autoreplacesession="false" revision="00000151-5ab6-8da0-a466-88aeb2177687" locationassource="false" localizationenabled="false" name="Sitecore Sublayout Rendering Pages Performance" authorname="dmabxw0" modified="2015-11-30T16:24:52-0700" id="8f2d7720-3a86-4921-a61b-2bdc046265a9">
+    <reportconfig print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" orientation="portrait" description="" title="" type="PDF" enabled="true" formathtml="com.dynatrace.diagnostics.report.velocity.format.htmlrenderer" lines.per.table="100" pagesize="A4" override="false" optimizeequalcolumns="true" print.legends="true" levels.per.tree="10" />
+    <filter>
+      <criterion type="admfilteranalyzer" />
+      <criterion mode="all" type="agents" completepurepath="true">
+        <textpattern name="agentname" type="contains" enabled="true" />
+        <textpattern name="agenthost" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="and" />
+      <criterion mode="all" excludeexternalsubpaths="false" type="api" />
+      <criterion mode="all" type="applications" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" type="browserpathtype" showjavascript="true" />
+      <criterion pageenabled="false" timerenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern match="contains" text="" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern match="contains" text="" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion type="casuemdimension" />
+      <criterion intervalend="0" intervalstart="0" type="dcrumdimension" filterinterval="false" />
+      <criterion analyzeserverpath="true" analyzeclienterrors="false" isactive="true" analyzeenduserpath="true" type="enduserpath" />
+      <criterion mode="all" type="hosts" completepurepath="true" />
+      <criterion severitiesmode="all" statesmode="all" type="incident" rulesmode="all" severities="" states="" />
+      <criterion type="or" />
+      <criterion mode="all" enduser="false" type="purepaths" />
+      <criterion contenttypegroupsmode="all" showrendering="true" javascripttriggersmode="all" isactive="false" shownetwork="true" requestcriterion="ALL" type="riapurepathtype" showjavascript="true" />
+      <criterion includemeasurename="true" includetestname="true" teststatus="OK" type="tests" />
+      <criterion type="threads" enabled="false" filterbyid="false" />
+      <criterion type="timeframe">
+        <timeframe type="Last 6h" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern name="timerName" type="contains" enabled="true" />
+        <textpattern name="pageContext" type="contains" enabled="true" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern match="contains" text="" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern match="contains" text="" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="MINUTES" time="15" enabled="true" />
+    <designconfig namefontsize="10" descriptionshow="true" headertype="DEFAULT" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="8" clienttheme="DEFAULT" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" autoadjustfontsizes="false" />
+    <dashboardlayout>
+      <portletfolder selectionindex="0" relationtype="LEFT" portletconfigorder="ba68b541-0ccf-481c-acc7-70fae35326f4" folderid="org.eclipse.ui.internal.ViewStack@7e24c90b" relatedfolderid="DashboardLayout.blankArea" ratio="0.95">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="02d53e75-4e85-4965-9cc6-b73610326398" folderid="org.eclipse.ui.internal.ViewStack@7662202c" relatedfolderid="org.eclipse.ui.internal.ViewStack@7e24c90b" ratio="0.4713376">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="0937c772-81f9-44aa-b539-406b36a477ef" folderid="org.eclipse.ui.internal.ViewStack@39e2701b" relatedfolderid="org.eclipse.ui.internal.ViewStack@7662202c" ratio="0.37229154">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="-1" relationtype="RIGHT" portletconfigorder="" isplaceholder="true" folderid="45ad7fd7-dca0-4b4f-a114-65300535f072" relatedfolderid="org.eclipse.ui.internal.ViewStack@39e2701b" ratio="0.57322174" />
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="a804cc41-1188-4321-813f-dbfd3434b6d5" folderid="org.eclipse.ui.internal.ViewStack@2eea1838" relatedfolderid="45ad7fd7-dca0-4b4f-a114-65300535f072" ratio="0.49754903">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="a03ace5f-051b-4a8c-9ac7-92dd6d768d1f" folderid="org.eclipse.ui.internal.ViewStack@1770635" relatedfolderid="org.eclipse.ui.internal.ViewStack@39e2701b" ratio="0.49598393">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="aed5162e-08bd-443e-9a2c-1fd00445a779" folderid="org.eclipse.ui.internal.ViewStack@4a79c681" relatedfolderid="org.eclipse.ui.internal.ViewStack@7662202c" ratio="0.49598393">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="ac5576d8-0d60-4483-820a-cf2a55d1d23d" folderid="org.eclipse.ui.internal.ViewStack@25041ca6" relatedfolderid="org.eclipse.ui.internal.ViewStack@7e24c90b" ratio="0.2072072">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="6204b6f6-d063-47a1-ad6b-12ff089fbf33" folderid="org.eclipse.ui.internal.ViewStack@1699df98" relatedfolderid="org.eclipse.ui.internal.ViewStack@25041ca6" ratio="0.4990151">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="76a486b7-3fa9-48dc-9e78-afe863a87170" folderid="org.eclipse.ui.internal.ViewStack@4b3157e5" relatedfolderid="org.eclipse.ui.internal.ViewStack@1699df98" ratio="0.4943182">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="5ef2167c-f964-4151-995e-ec7783e4157a" folderid="org.eclipse.ui.internal.ViewStack@69fbf0c4" relatedfolderid="org.eclipse.ui.internal.ViewStack@25041ca6" ratio="0.4943182">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="BOTTOM" portletconfigorder="980f9063-b0d6-4066-9d7a-2b16a7b96b73" folderid="org.eclipse.ui.internal.ViewStack@2e12c4ed" relatedfolderid="org.eclipse.ui.internal.ViewStack@7e24c90b" ratio="0.5">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="HEADLESS" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="494a7bd3-aa2c-4a57-b03e-09d8c6aab36c" folderid="org.eclipse.ui.internal.ViewStack@5a7f2df2" relatedfolderid="org.eclipse.ui.internal.ViewStack@7e24c90b" ratio="0.4990151">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="81bb6526-5d97-4eb6-a2c6-01f5952dce41" folderid="org.eclipse.ui.internal.ViewStack@77a882c7" relatedfolderid="org.eclipse.ui.internal.ViewStack@5a7f2df2" ratio="0.31323722">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+      <portletfolder selectionindex="0" relationtype="RIGHT" portletconfigorder="167a0453-c5ff-4402-80d0-d38c4da59895" folderid="org.eclipse.ui.internal.ViewStack@2c62cd00" relatedfolderid="org.eclipse.ui.internal.ViewStack@77a882c7" ratio="0.49618322">
+        <designconfig namefontsize="14" descriptionshow="true" headertype="CUSTOM" nameshow="true" descriptionfontstyle="NORMAL" namealignment="CENTER" namefontstyle="BOLD" descriptionfontsize="10" inherited="false" descriptionfontcolor="128,128,128" descriptionalignment="CENTER" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@77a882c7" locationassource="false" addfilterinfo="false" name="Process Alerts" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" id="81bb6526-5d97-4eb6-a2c6-01f5952dce41">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="36" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <table structuremode="hierarchicalincident" sortcolumn="2" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7">
+          <column forcevisible="false" hidden="false" width="150" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="2" sort="Up" />
+          <column forcevisible="false" hidden="false" width="120" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="60" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="7" sort="None" />
+        </table>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="IncidentTrafficLight" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" measure="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Agent Instrumentation Disabled" overridesource="false" sourcetype="INCIDENT_RULE" id="bbe925d0-5d58-423c-9877-f7ee82ce764a" position="1" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="10" flags="1" description="Agent automatically disabled its instrumentation. Possible reasons are for example, if there was no Collector reachable when the Agent was started up or overall instrumentation performance on the Collector was too low." id="Agent Instrumentation Disabled">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="perViolation" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Application Process Unavailable (unexpected)" overridesource="false" sourcetype="INCIDENT_RULE" id="dbdbc33a-f890-4460-bd4d-5597831cac37" position="2" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="10" flags="1" description="Connection to a previously connected Application Process/Agent has been lost." id="Application Process Unavailable (unexpected)">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="perViolation" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="beginAndEnd" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Application Process Unhealthy" overridesource="false" sourcetype="INCIDENT_RULE" id="31ae8b32-2b6c-4058-81e6-a4056e9522bb" position="3" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The Application Process has had significant suspension time for a sustained period of time due to spending considerable amount of it's execution time on Garbage Collection." id="Application Process Unhealthy">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Application Process Out-of-Memory" overridesource="false" sourcetype="INCIDENT_RULE" id="7519f94d-e157-49e7-a572-d130507b1a7b" position="4" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="10" flags="1" description="Application Process reported Out-of-memory. A Memory Dump will be automatically triggered if not disabled in the Agent group settings." id="Application Process Out-of-Memory">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="perViolation" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="AdjustToFontSize" locationascomparesource="false" source="server://ut1dynastcr01" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="&#xA;" folderid="org.eclipse.ui.internal.ViewStack@2e12c4ed" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(211,50,46,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(255,255,255,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="980f9063-b0d6-4066-9d7a-2b16a7b96b73">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="" style="BOLD" height="5" />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="Time for DoRender plus its children" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1770635" locationassource="false" addfilterinfo="false" name="DoRender Time Percentiles" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="a03ace5f-051b-4a8c-9ac7-92dd6d768d1f">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="2" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="15" enabled="true" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="15min" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(122,150,235,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="cc8c690b-289a-47eb-a29c-f111115f247c" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="90" id="9313fdd4-7d86-3791-a707-f752f3d02d56" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Time DoRender" agentname="-" metricsimpledisplayname="Time" agenthost="-" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="99" id="a2aeb02b-8b9c-4d93-9876-d5a3a1fbb7db" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Time DoRender" agentname="" metricsimpledisplayname="Time" agenthost="" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(89,89,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="140b4bee-022a-474e-97ef-d09c29b9c14c" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="50" id="b944fed1-0959-3b16-a96e-36c0ee68038c" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Time DoRender" agentname="-" metricsimpledisplayname="Time" agenthost="-" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="90" id="cc8c690b-289a-47eb-a29c-f111115f247c" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Time DoRender" agentname="" metricsimpledisplayname="Time" agenthost="" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="50" id="140b4bee-022a-474e-97ef-d09c29b9c14c" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Time DoRender" agentname="" metricsimpledisplayname="Time" agenthost="" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(33,80,222,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="a2aeb02b-8b9c-4d93-9876-d5a3a1fbb7db" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="99" id="4bb52400-a696-3f43-bb4d-168e83e01b60" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Time DoRender" agentname="-" metricsimpledisplayname="Time" agenthost="-" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="Nuber of Times DoRender is invoked" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@2eea1838" locationassource="false" addfilterinfo="false" name="DoRender Count" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="a804cc41-1188-4321-813f-dbfd3434b6d5">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="3" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(0,64,64,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="bdc51385-33ec-4277-9656-3eb3dad0d26c" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Time DoRender" agentname="" metricsimpledisplayname="Time" agenthost="" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(235,122,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="bdc51385-33ec-4277-9656-3eb3dad0d26c" groupingcriterion="Application" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="eea432ba-d807-3e5e-b548-e3bfe36ec2cb" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Time DoRender" agentname="-" metricsimpledisplayname="Time" agenthost="-" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@25041ca6" locationassource="false" addfilterinfo="false" name="Sublayout Rendering Page Performance All" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="ac5576d8-0d60-4483-820a-cf2a55d1d23d">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="6" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(64,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="8e929e9d-439c-4eb9-88ac-beeea24377f9" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(11,23,76,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="8e929e9d-439c-4eb9-88ac-beeea24377f9" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="703ec0e2-d4fc-39cf-851f-c8e881f0bbdd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Rendering Pages" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(11,23,76,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="8e929e9d-439c-4eb9-88ac-beeea24377f9" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="71303ed8-bfa2-3a04-9d5c-56a171e6dd15" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Renderings Per Page" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="Time for DoRender alone, without children" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4a79c681" locationassource="false" addfilterinfo="false" name="DoRender Exec Time Percentiles" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="aed5162e-08bd-443e-9a2c-1fd00445a779">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(186,42,32,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="99" id="90e6a900-d7db-4de1-871d-f959a096b849" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Exec Time DoRender" agentname="" metricsimpledisplayname="Exec Time" agenthost="" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="90e6a900-d7db-4de1-871d-f959a096b849" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="99" id="96af3400-8ac1-372d-8604-e3c65b8fa71a" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Exec Time DoRender" agentname="-" metricsimpledisplayname="Exec Time" agenthost="-" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(89,47,13,255)" dynamicconfig="true" fetchthreshold="true" scale="0" sessionid="SiteCore" parentid="e736e7f6-4b34-4803-89d8-df98178056fc" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="50" id="9d327a91-c073-3265-8931-b68c3f466c9b" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Exec Time DoRender" agentname="-" metricsimpledisplayname="Exec Time" agenthost="-" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(74,103,232,255)" dynamicconfig="false" fetchthreshold="true" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="50" id="e736e7f6-4b34-4803-89d8-df98178056fc" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="3" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Exec Time DoRender" agentname="" metricsimpledisplayname="Exec Time" agenthost="" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="90" id="5a3c1cbe-36d6-4c5c-94eb-2c0147bda95d" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="2" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Exec Time DoRender" agentname="" metricsimpledisplayname="Exec Time" agenthost="" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(89,89,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="5a3c1cbe-36d6-4c5c-94eb-2c0147bda95d" groupingcriterion="Application" aggregationtype="Pct" rate="10s" sourcetype="MEASURE" pctparam="90" id="6a740a37-ec31-36ff-9ce5-ab25d9f7d1dd" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Exec Time DoRender" agentname="-" metricsimpledisplayname="Exec Time" agenthost="-" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" heightmode="UseBackgroundImageHeight" locationascomparesource="false" source="server://ut1dynastcr01" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="sitecore rendering page performance " folderid="org.eclipse.ui.internal.ViewStack@7e24c90b" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="RIGHT" locationassource="false" addfilterinfo="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" invertcolors="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" name="Text and Image" ismaster="false" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" typeid="com.dynatrace.diagnostics.portlets.text.Text" id="ba68b541-0ccf-481c-acc7-70fae35326f4">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="29" enabled="true" levels.per.tree="10" />
+      <filter>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART_AND_TABLE" weights="1,1" />
+      <font name="" style="BOLD" height="22" />
+      <image offset="-1" length="16036">
+        <chunk offset="0" data="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" />
+      </image>
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="Time for DoRender alone, without children" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@7662202c" locationassource="false" addfilterinfo="false" name="DoRender Exec Time Avg" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="02d53e75-4e85-4965-9cc6-b73610326398">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="1" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="90e6a900-d7db-4de1-871d-f959a096b849" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Exec Time DoRender" agentname="" metricsimpledisplayname="Exec Time" agenthost="" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="90e6a900-d7db-4de1-871d-f959a096b849" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="96af3400-8ac1-372d-8604-e3c65b8fa71a" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Exec Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Exec Time DoRender" agentname="-" metricsimpledisplayname="Exec Time" agenthost="-" metrickeyid="Exec Time" keyid="Exec Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="Time for DoRender plus its children" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@39e2701b" locationassource="false" addfilterinfo="false" name="DoRender Time Avg" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="0937c772-81f9-44aa-b539-406b36a477ef">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="2" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="AreaChart" showheatfield="false" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,196,82,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="a2aeb02b-8b9c-4d93-9876-d5a3a1fbb7db" ratesupported="false" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Time DoRender" agentname="" metricsimpledisplayname="Time" agenthost="" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(33,80,222,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="a2aeb02b-8b9c-4d93-9876-d5a3a1fbb7db" groupingcriterion="Application" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="4bb52400-a696-3f43-bb4d-168e83e01b60" ratesupported="false" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="MethodMeasure" fetchbaseline="false" unit="ms" name="Time DoRender" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Time DoRender" agentname="-" metricsimpledisplayname="Time" agenthost="-" metrickeyid="Time" keyid="Time DoRender" metricgroupkey="Methods" collector="" measuretype="MethodMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="SiteCoreAppPool[LaunchSiteCoreAppPool]" agenthost="ut1dynastcr01" agentgroup="SiteCoreAppPool" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@2c62cd00" locationassource="false" addfilterinfo="false" name="Transaction Alerts" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" id="167a0453-c5ff-4402-80d0-d38c4da59895">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="35" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <table structuremode="hierarchicalincident" sortcolumn="2" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7">
+          <column forcevisible="false" hidden="false" width="150" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="2" sort="Up" />
+          <column forcevisible="false" hidden="false" width="120" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="60" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="7" sort="None" />
+        </table>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="IncidentTrafficLight" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" measure="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Average response time degraded" overridesource="false" sourcetype="INCIDENT_RULE" id="9faa6985-ba24-43f2-bdc4-2f5b23259d3b" position="5" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The average response time (median) is significantly higher than expected. Although the observed response time might be still acceptable for users, this behavior is typically caused by application or infrastructure problems and reduces the maximum throughput you can achieve." id="Average response time degraded">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="High Overall Failed Transaction Rate" overridesource="false" sourcetype="INCIDENT_RULE" id="2f5e2509-cd7a-465b-a4d2-bfa3cc091e4e" position="1" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="300" flags="1" description="The overall failed transaction rate exceeds the configured threshold." id="High Overall Failed Transaction Rate">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="High Overall Failed Page Action Rate" overridesource="false" sourcetype="INCIDENT_RULE" id="3e95a955-6ed0-4ce3-acb4-2a538338657b" position="4" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Dashboard" timeframe="300" flags="1" description="The overall failed page action rate exceeds the configured threshold." id="High Overall Failed Page Action Rate">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Failure rate too high" overridesource="false" sourcetype="INCIDENT_RULE" id="6e746891-9d09-44eb-befd-bcbff83ae21d" position="2" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The rate of failed transactions is significantly higher than expected." id="Failure rate too high">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Response time degraded for slow requests" overridesource="false" sourcetype="INCIDENT_RULE" id="728c3cb8-4ff0-4b0b-92fd-191a9bb2551e" position="3" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The observed response time for the slowest 10% of requests has increased significantly. This results in poor user experience and can be caused by application or infrastructure problems." id="Response time degraded for slow requests">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/default_16x16.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@5a7f2df2" locationassource="false" addfilterinfo="false" name="Host Alerts" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Incident" id="494a7bd3-aa2c-4a57-b03e-09d8c6aab36c">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="34" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <table structuremode="hierarchicalincident" sortcolumn="2" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7">
+          <column forcevisible="false" hidden="false" width="150" index="0" sort="None" />
+          <column forcevisible="false" hidden="false" width="20" index="1" sort="None" />
+          <column forcevisible="false" hidden="false" width="120" index="2" sort="Up" />
+          <column forcevisible="false" hidden="false" width="120" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="60" index="4" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="120" index="7" sort="None" />
+        </table>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="IncidentTrafficLight" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" measure="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Host CPU Unhealthy" overridesource="false" sourcetype="INCIDENT_RULE" id="ab2068c6-7939-451f-8e82-19c55b6c758d" position="2" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The Host has had a high CPU usage for a sustained period of time." id="Host CPU Unhealthy">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Host Memory Unhealthy" overridesource="false" sourcetype="INCIDENT_RULE" id="d46f8c22-be09-4551-a1c7-d2c3b478894f" position="1" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The Host has had memory with little space available or considerable amount of page faults for a sustained period of time." id="Host Memory Unhealthy">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Host Network Unhealthy" overridesource="false" sourcetype="INCIDENT_RULE" id="f55d45aa-1a2f-4aa4-a0db-6f916d5fca11" position="3" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The Host has had at least one network interface with high bandwidth usage for a sustained period of time." id="Host Network Unhealthy">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <chartsource systemid="SiteCore" visible="true" dynamicconfig="false" sessiontype="live" scale="0" sessionid="SiteCore" autoscale="false" name="Host Disk Unhealthy" overridesource="false" sourcetype="INCIDENT_RULE" id="0040d45b-0a28-41e1-aa39-d141fa9cbd0f" position="4" displayrate="10s">
+            <incidentrule incidentdashboardname="Incident Zero Conf Dashboard" timeframe="10" flags="1" description="The Host has at least one disk with little space available." id="Host Disk Unhealthy">
+              <sensitivity duration="0" delay="0" minnonviolatedperiod="60" id="immediate" />
+              <actions>
+                <actionref severity="severe" execution="begin" refaction="com.dynatrace.diagnostics.logging" smartalert="false" rolekey="com.dynatrace.diagnostics.logging" roletype="1" type="Logging Notification" key="com.dynatrace.diagnostics.logging" bundleversion="0.0.0" />
+                <actionref severity="informational" execution="begin" refaction="com.dynatrace.diagnostics.plugins.EmailNotification" smartalert="false" rolekey="com.dynatrace.diagnostics.plugins.EmailNotificationAction" roletype="1" type="Email Notification" key="com.dynatrace.diagnostics.plugins.EmailNotification" bundleversion="0.0.0">
+                  <property typeid="string" value="" key="from" />
+                  <property typeid="string" value="group[Incident Email Group]" key="to" />
+                  <property typeid="string" value="" key="cc" />
+                  <property typeid="string" value="" key="bcc" />
+                  <property typeid="string" value="" key="prefix" />
+                </actionref>
+              </actions>
+            </incidentrule>
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+      </datamodelconfig>
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@69fbf0c4" locationassource="false" addfilterinfo="false" name="Sublayout Rendering Page Performance Split" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="5ef2167c-f964-4151-995e-ec7783e4157a">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="4" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(64,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Avg" rate="10s" sourcetype="MEASURE" id="439f4a6d-485c-4abb-8c57-24bfad28b31c" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@1699df98" locationassource="false" addfilterinfo="false" name="Sublayout Rendering Page Count All" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="6204b6f6-d063-47a1-ad6b-12ff089fbf33">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="6" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="true" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" bounds.y.lower="0.0" maxdisplayitems="10" zoomable="true" charttype="ClusteredBarChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="true" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(64,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="Application" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="8e929e9d-439c-4eb9-88ac-beeea24377f9" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(11,23,76,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="8e929e9d-439c-4eb9-88ac-beeea24377f9" groupingcriterion="Application" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="703ec0e2-d4fc-39cf-851f-c8e881f0bbdd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(11,23,76,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="8e929e9d-439c-4eb9-88ac-beeea24377f9" groupingcriterion="Application" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="71303ed8-bfa2-3a04-9d5c-56a171e6dd15" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Renderings Per Page" groupingvalue="" overridesource="true" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="Default Application" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig showabsolutevalues="false" usedashboardsourceforcompare="true" usespecificautorefresh="false" sessiontype="live" lastvalue="false" icon="com.dynatrace.diagnostics.sdk/chart_cust.png" description="" locationascomparesource="false" source="server://ut1dynastcr01" sessionid="SiteCore" usedashboardsource="true" folderid="org.eclipse.ui.internal.ViewStack@4b3157e5" locationassource="false" addfilterinfo="false" name="Sublayout Rendering Page Count Split" ismaster="false" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" id="76a486b7-3fa9-48dc-9e78-afe863a87170">
+      <reportconfig print.images="true" lines.per.table="100" override="false" optimizeequalcolumns="true" print.legends="true" reportposition="5" enabled="true" levels.per.tree="10" />
+      <filter>
+        <criterion mode="all" type="agents" completepurepath="true">
+          <textpattern name="agentname" type="contains" enabled="true" />
+          <textpattern name="agenthost" type="contains" enabled="true" />
+        </criterion>
+        <criterion mode="all" type="applications" />
+        <criterion type="btm" />
+        <criterion mode="all" type="hosts" completepurepath="true" />
+        <criterion type="timeframe">
+          <timeframe type="Last 6h" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="MINUTES" time="5" enabled="false" />
+      <sashconfig displayoption="CHART" weights="500,500" />
+      <datamodelconfig>
+        <chart axis.x.title="" axis.y.title.show="false" showtooltips="true" bounds.y.enabled="false" showvalues="false" showtitle="false" logxaxis="false" title="" resolution="Auto" axis.x.show="true" showname="true" maxdisplayitems="10" zoomable="true" charttype="LineChart" showheatfield="true" axis.y.show="true" isentitymarkable="false" orientation="Horizontal" yaxisalignment="0" legendposition="Bottom" axis.x.title.show="false" axis.y.title="" splitcharts="false" limititems="false" showlegend="false" lockyaxis="true" showlabels="true">
+          <legendcomposition measure="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(89,56,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="80c66509-4155-3599-ad57-c1f034ec12ec" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(33,170,222,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="81dfeef1-a914-3fae-8ba7-10f29d203c42" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(13,32,89,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="8435e0a1-c242-37b6-9078-f8560e2ec993" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(235,173,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="9d7b8467-ed31-30ee-bb11-b3293d4586cd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Team/Brandon-Royal" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(242,220,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ab2c0a6a-ddea-334f-a131-7457a5b08825" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Building-the-Site/Create-a-Custom-Validator" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(229,207,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="b570556e-6123-3ed7-8671-bf8ff8381ec1" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary/Device" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,20,121,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="c0629b35-9e3a-3a84-8654-b5d114cdbb34" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(111,133,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="c6fb427c-d9ed-3383-ab2d-31cd72c873f0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Our-Strategy/Workflow" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(172,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="cc20fe72-6e67-396d-9370-d33ae35da188" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(76,133,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="ddadc6dc-aa4f-3e4e-aae7-40b58d836ed6" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/About-Launch-Sitecore/Getting-Started/The-Sitecore-UIs" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(229,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="de6eaba5-dc8a-3a77-94a8-b83d75898401" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Team" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,20,68,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e2a70496-9819-3bad-8558-d1cd5d58eafd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/About-Launch-Sitecore/Getting-Started" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(222,195,33,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="e4cecc70-dfd4-3715-bad6-71763f3f46ce" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Our-Strategy" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(49,223,32,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="f659280b-7f51-3193-9c3a-3ab32e6eee4b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Team/Brandon-Royal" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,20,121,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="03e27f8d-3c66-3e49-9be3-0f20392277af" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(235,186,122,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="0eb635f9-4005-35ba-94da-3dc006d79cad" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary/Workbox" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,117,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="13ef3c39-85ca-3573-8b66-75472ba57068" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Building-the-Site/Create-a-custom-sorting-routine-for-content" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(76,133,20,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="15b04467-7a78-344f-9af9-7dc39b54a3b8" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="1c575288-6b30-3168-81be-0bd7faf070bd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/About-Launch-Sitecore/Getting-Started" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(89,47,13,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="29df6d49-96ec-3901-82db-95fdb951fe73" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Our-Strategy/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(64,192,0,255)" dynamicconfig="false" fetchthreshold="false" scale="0" sessionid="SiteCore" groupingcriterion="BTSP1" colorinheritancemode="random" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2d1c12b6-48e0-4c01-928a-7b8466fe2073" ratesupported="true" displayrate="10s" visible="false" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="ms" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="true" position="1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="" metricsimpledisplayname="Value" agenthost="" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure" />
+            <displaysourceinfo measureunit="ms" agentname="" agenthost="" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(77,115,229,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="2e074cde-4f0f-3052-889a-a219177d92ca" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Building-the-Site/Create-a-custom-sorting-routine-for-content" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(118,26,178,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="3b1f4a23-9179-3e26-b345-2eafaef7b80b" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary/Device" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(178,65,26,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="4084bc45-e2f1-31dc-91f9-247adb4353f5" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Building-the-Site/Create-a-Custom-Validator" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,20,121,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="47c6d047-3eed-3e8b-aea2-60abf4de510e" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Our-Strategy" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(90,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5472e1a3-d1a0-36a1-a5fa-f2cecad6768d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(229,229,77,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5796bec9-1c9c-39e9-a49d-539b6da5e3f3" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Team" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(133,20,68,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="5b501f1a-dd2b-3327-8f84-8c1537e05fbd" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/About-Launch-Sitecore/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(242,231,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="717c8345-7162-320e-82af-8a88c944a47c" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Renderings Per Page" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Renderings Per Page" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Renderings Per Page" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Glossary/Workbox" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="SiteCoreAppPool" transactionname="Renderings Per Page" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(78,228,192,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="74e1647f-2f91-3927-b06f-7205b4cb427d" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="About-Launch-Sitecore/Our-Strategy/Workflow" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(172,242,166,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="79a9ec33-d247-379c-bd1b-4d06ba8a5c36" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="Team/&lt;...&gt;" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <chartsource systemid="SiteCore" sourcecolor="RGB(222,195,33,255)" dynamicconfig="true" fetchthreshold="false" scale="0" sessionid="SiteCore" parentid="2d1c12b6-48e0-4c01-928a-7b8466fe2073" groupingcriterion="BTSP1" aggregationtype="Count" rate="10s" sourcetype="MEASURE" id="7e7aee32-e277-397d-9366-7e54946f74f0" ratesupported="true" displayrate="10s" visible="true" autounit="false" sessiontype="live" fetch.dynamic.measures="true" autoscale="false" measuretype="TransactionMeasure" fetchbaseline="false" unit="count" name="Rendering Pages" groupingvalue="" overridesource="false" fetchmeasurecolor="false" position="-1" uiunit="ms">
+            <tagtolabel>
+              <taglabelentry value="Complete Uri Path" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier systemid="SiteCore" application="" parentkeyid="Rendering Pages" agentname="-" metricsimpledisplayname="Value" agenthost="-" metrickeyid="Value" keyid="Rendering Pages" metricgroupkey="Business Transaction Results" collector="" measuretype="TransactionMeasure">
+              <tag type="0" value="en/About-Launch-Sitecore/Getting-Started/The-Sitecore-UIs" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo measureunit="ms" agentname="-" agenthost="-" agentgroup="&lt;all-agents&gt;" transactionname="Rendering Pages" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitlayout="Horizontal" splitmode="PerSeries" />
+        </chart>
+        <table structuremode="measureHierarchy" sortcolumn="16" drawcolumn="-1" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column forcevisible="false" hidden="false" width="400" index="0" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="1" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="2" sort="None" />
+          <column forcevisible="false" hidden="false" width="25" index="3" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="4" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="5" sort="None" />
+          <column forcevisible="false" hidden="false" width="50" index="6" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="7" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="8" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="9" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="10" sort="None" />
+          <column forcevisible="false" hidden="true" width="75" index="11" sort="None" />
+          <column forcevisible="false" hidden="true" width="100" index="12" sort="None" />
+          <column forcevisible="false" hidden="false" width="105" index="13" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="14" sort="None" />
+          <column forcevisible="false" hidden="true" width="50" index="15" sort="None" />
+          <column forcevisible="false" hidden="false" width="100" index="16" sort="Up" />
+          <column forcevisible="false" hidden="true" width="150" index="17" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="18" sort="None" />
+          <column forcevisible="false" hidden="true" width="150" index="19" sort="None" />
+        </table>
+        <heatfieldconfig customevents="true" deploymentevents="true" smartmeasure="true" smartserver="true" filterconfirmed="false">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+
